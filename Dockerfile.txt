@@ -1,0 +1,21 @@
+# Použijeme předpřipravený obraz s Puppeteerem
+FROM ghcr.io/puppeteer/puppeteer:21.5.2
+
+# DŮLEŽITÉ: Řekneme instalátoru, ať nestahuje Chrome znovu (už tam je)
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+
+# Teď to proběhne bleskově, protože se stahují jen malé knihovny
+RUN npm install
+
+COPY . .
+
+ENV PORT=7860
+
+EXPOSE 7860
+
+CMD [ "node", "index.js" ]
