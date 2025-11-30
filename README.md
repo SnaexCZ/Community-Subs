@@ -48,7 +48,6 @@ Hugging Face Spaces nabízí v bezplatné verzi dostatek RAM (16GB), aby Puppete
 
 ### Možnost B: Lokálně / VPS (Docker)
 
-```bash
 # 1. Stáhněte repozitář
 git clone [https://github.com/SnaexCZ/Community-Subs.git](https://github.com/SnaexCZ/Community-Subs.git)
 cd Community-Subs
@@ -60,7 +59,7 @@ docker build -t community-subs .
 docker run -d -p 7000:7000 -e COOKIE="VASE_COOKIE_ZDE" --name community-subs community-subs
 
 
-#� Licence
+#Licence
 
 Tento projekt je open-source pod licencí MIT.
 
