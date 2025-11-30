@@ -2,7 +2,7 @@
 
 Tento doplněk pro [Stremio](https://www.stremio.com/) automaticky vyhledává a stahuje **české a slovenské titulky** k seriálům a anime.
 
-Data jsou získávána ("scrapována") přímo ze stránky [svetserialu.io](https://svetserialu.io), což zajišťuje přístup ke komunitním titulkům, které často nejsou dostupné na OpenSubtitles.
+Data jsou získávána ("scrapována") přímo ze stránky [svetserialu.io](https://svetserialu.io).
 
 ## ⚠️ Důležité: Požadavek na Premium
 
@@ -32,19 +32,29 @@ Aby doplněk fungoval, musíte mu předat své přihlašovací údaje.
 
 Aby vám doplněk fungoval spolehlivě a měli jste nad ním kontrolu, doporučujeme vytvořit si vlastní instanci.
 
-### Možnost A: Hugging Face (Doporučeno) ✅
+### Možnost A: Hugging Face (Zdarma & Doporučeno) ✅
 Hugging Face Spaces nabízí v bezplatné verzi dostatek RAM (16GB), aby Puppeteer běžel stabilně.
 
-1.  Přihlaste se na **GitHub**.
-2.  Vpravo nahoře na této stránce klikněte na tlačítko **Fork** (vytvoří se kopie tohoto repozitáře na vašem profilu).
-3.  Přejděte na [Hugging Face](https://huggingface.co/) a vytvořte nový **Space**.
-4.  Jako **Space SDK** vyberte **Docker**.
-5.  V sekci "Repository" zvolte svůj **nově vytvořený (forknutý) GitHub repozitář**.
-6.  Vytvořte Space.
-7.  **DŮLEŽITÉ:** V nastavení Space (Settings) -> **Variables and secrets** klikněte na **New Secret**.
+1.  **Stáhněte si tento repozitář:**
+    * Klikněte na zelené tlačítko **<> Code** na tomto GitHubu a zvolte **Download ZIP**.
+    * ZIP soubor v počítači rozbalte.
+2.  Přejděte na [Hugging Face](https://huggingface.co/new-space) a vytvořte nový **Space**:
+    * **Space name:** Zvolte libovolný název (např. `moje-titulky`).
+    * **License:** `MIT`.
+    * **Space SDK:** Vyberte **Docker** (Blank).
+    * Klikněte na **Create Space**.
+3.  **Nahrajte soubory:**
+    * V novém Space klikněte nahoře na záložku **Files**.
+    * Klikněte na tlačítko **Add file** -> **Upload files**.
+    * Přetáhni tam soubory `index.js`, `package.json` a `Dockerfile` z rozbalené složky.
+    * Dole klikněte na **Commit changes to main**.
+4.  **Nastavte Cookies (Secret):**
+    * Klikněte nahoře na záložku **Settings**.
+    * Najděte sekci **Variables and secrets**.
+    * Klikněte na **New Secret**.
     * **Name:** `COOKIE`
-    * **Value:** (Vložte zkopírovaný řetězec z kroku "Konfigurace")
-8.  Space se restartuje a doplněk bude plně funkční.
+    * **Value:** (Vložte zkopírovaný řetězec z kroku "Konfigurace").
+5.  Space se automaticky restartuje a po chvíli (až zmizí "Building") bude funkční.
 
 ### Možnost B: Lokálně / VPS (Docker)
 
