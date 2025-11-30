@@ -68,3 +68,22 @@ docker build -t community-subs .
 
 # 3. Spusťte kontejner s nastavenou Cookie (nahraďte VASE_COOKIE_ZDE)
 docker run -d -p 7000:7000 -e COOKIE="VASE_COOKIE_ZDE" --name community-subs community-subs
+
+```markdown
+---
+
+## 🔌 Instalace do Stremia
+
+Jakmile máte doplněk spuštěný a máte jeho URL adresu (např. `https://vase-jmeno-space.hf.space`):
+
+1.  Otevřete Stremio.
+2.  Přejděte do sekce **Add-ons** (Doplňky).
+3.  Do vyhledávacího řádku vložte URL adresu vašeho běžícího doplňku.
+4.  Klikněte na **Install**.
+
+---
+
+## 📝 Licence
+
+Tento projekt je open-source pod licencí **MIT**.
+Slouží ke studijním účelům. Autor nenese odpovědnost za obsah stahovaný z třetích stran.
