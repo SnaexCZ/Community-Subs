@@ -69,8 +69,7 @@ docker build -t community-subs .
 # 3. Spusťte kontejner s nastavenou Cookie (nahraďte VASE_COOKIE_ZDE)
 docker run -d -p 7000:7000 -e COOKIE="VASE_COOKIE_ZDE" --name community-subs community-subs
 
-```markdown
----
+```
 
 ## 🔌 Instalace do Stremia
 
